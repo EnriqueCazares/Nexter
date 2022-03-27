@@ -250,6 +250,22 @@ body {
   gap: 1.5rem;
   padding: 1.5rem;
 }
+.gallery__item {
+  outline-offset: 1rem;
+  transition: all 0.2s;
+}
+.gallery__item:not(.gallery__item--4, .gallery__item--9, .gallery__item--14):hover {
+  outline: 1.5rem solid #c69963;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.gallery__item--4:hover, .gallery__item--9:hover, .gallery__item--14:hover {
+  outline: 1.5rem solid #c69963;
+  transform: scale(1.05) translateY(-1.1rem) translateX(-2rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
 .gallery__item--1 {
   grid-row: 1/span 2;
   grid-column: 1/span 2;
@@ -311,9 +327,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-.gallery > * {
-  width: 100%;
 }
 
 .footer {
